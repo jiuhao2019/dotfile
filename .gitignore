@@ -72,4 +72,5 @@
 .config/opensnitch/
 .config/Thunar/
 .config/xfce4/
+.config/nvim/
 
