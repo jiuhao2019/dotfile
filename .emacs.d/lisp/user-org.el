@@ -11,7 +11,6 @@
   (setq org-log-into-drawer t)
   (setq org-html-validation-link nil)
   (setq epa-file-cache-passphrase-for-symmetric-encryption t);;对称加密时缓存密码，不用每次打开和保存都输入
-
   ;;
   (setq org-agenda-start-with-log-mode t)
   (setq org-agenda-files nil);;打开emacs后清除用来agenda的文件,每次手动添加。
