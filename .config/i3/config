@@ -38,19 +38,14 @@ title_align center
 # 开机随i3启动                      
 
 exec --no-startup-id opensnitch-ui&
-#exec_always --no-startup-id feh --bg-fill -no-fehbg ~/.config/i3/od_tux.png
-
-# if os as client in virtualbox
 exec --no-startup-id VBoxClient-all
 exec --no-startup-id VBoxClient -vf --vmsvga
-
 exec --no-startup-id xset -dpms
 exec --no-startup-id xset s off
 exec --no-startup-id ibus-daemon -rxRd
 exec --no-startup-id dunst -conf ~/.config/dunst/dunstrc
 exec --no-startup-id wezterm
 exec --no-startup-id clash&
-#exec --no-startup-id picom --config ~/.config/i3/picom.conf -b
 exec --no-startup-id ~/.config/i3/autoload.sh
 
 bindsym Caps_Lock --release exec --no-startup-id dunstify "CapsLock: `xset q | sed -n 's/^.*Caps Lock:\s*\(\S*\).*$/\1/p'`" -t 1500 -r 6 -u low
@@ -74,44 +69,34 @@ bindsym $mod+Shift+j move down
 # split in horizontal orientation is default
 # split in vertical orientation
 bindsym $mod+v split v
-
 #full screen toggle
 bindsym $mod+f fullscreen toggle
-
 #如果偶然出现不能切换到输入中文状态，就重置ibus
 bindsym $mod+b exec --no-startup-id ibus-daemon -drx
-
 #change focus between tiling or floating
 bindsym $mod+i focus mode_toggle
 bindsym $mod+Shift+i floating toggle
-
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+x layout toggle
-
 bindsym $mod+Shift+r restart
 bindsym $mod+q kill
 bindsym $mod+d exec --no-startup-id rofi -show drun
 bindsym $mod+t exec --no-startup-id rofi -show window
-bindsym $mod+Return exec --no-startup-id wezterm start zsh
+bindsym $mod+Return exec --no-startup-id wezterm
 bindsym $mod+e exec --no-startup-id emacs
 bindsym $mod+p exec --no-startup-id /usr/bin/flameshot gui
 bindsym $mod+n exec --no-startup-id /usr/bin/thunar
-
 #声音大小调整
 bindsym $mod+y exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -1%
 bindsym $mod+u exec  pactl set-sink-volume @DEFAULT_SINK@ +1%
 bindsym $mod+m exec  pactl set-sink-mute @DEFAULT_SINK@ toggle
-
 # 使当前聚焦的窗口成为便笺簿
 bindsym $mod+Shift+c move scratchpad
-
 # 显示第一个便笺簿窗口
 bindsym $mod+c scratchpad show
 
 #默认锁屏幕方式
-# bindsym $mod+o exec --no-startup-id i3lock
-#i3lock-color方式锁屏幕
-bindsym $mod+o exec --no-startup-id /home/$USER/.config/i3/i3lock-color.sh
+bindsym $mod+o exec --no-startup-id i3lock
 
 #修改窗口大小
 set $resize [h]width- [l]width+ [j]height- [k]height+
