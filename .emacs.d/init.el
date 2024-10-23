@@ -121,8 +121,6 @@
 
   ;; Enable flashing mode-line on errors
   (doom-themes-visual-bell-config)
-  ;; Enable custom neotree theme (all-the-icons must be installed!)
-  (doom-themes-neotree-config)
   ;; Corrects (and improves) org-mode's native fontification.
   (doom-themes-org-config))
 
