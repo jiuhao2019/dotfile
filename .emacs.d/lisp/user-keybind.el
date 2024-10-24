@@ -71,10 +71,12 @@
 [_i_] clock-in
 [_o_] clock-out
 [_r_] clock-report
+[_t_] insert-timestamps
 "
   ("i"   org-clock-in nil :color blue)
   ("o"   org-clock-out nil :color blue)
-  ("r"   org-clock-report nil :color blue))
+  ("r"   org-clock-report nil :color blue)
+  ("t"   org-timestamp nil :color blue))
 ;;  plain list
 (defhydra hydra-org-plain-list (:hint nil )
   "
