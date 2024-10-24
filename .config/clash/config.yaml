@@ -3,7 +3,7 @@ allow-lan: false
 mode: rule
 log-level: info
 external-controller: localhost:9090
-external-ui: /etc/clash/clash-dashboard
+external-ui: /home/cz/.config/clash/clash-dashboard
 secret: '135984'
 dns:
   enable: false
