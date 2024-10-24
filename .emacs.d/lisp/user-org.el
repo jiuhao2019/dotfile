@@ -34,25 +34,6 @@
   :custom
   (org-bullets-bullet-list '("◉" "○" "●" "○" "●" "○" "●" "○" "●")))
 
-;;
-(use-package org-roam
-  :config
-  (setq org-roam-directory (file-truename "~/user-note"))
-  (setq org-roam-db-location (concat "~/user-note/org-roam-db/org-roam-" system-name ".db"))
-  (setq find-file-visit-truename t)
-  (org-roam-db-autosync-mode)
-  (setq org-roam-node-display-template
-	(concat "${title:*} "
-		(propertize "${tags:10}" 'face 'org-tag)))
-  (setq org-roam-database-connector 'sqlite-builtin)
-  (setq org-roam-v2-ack t)
-  ;;设置默认新节点名称不含时间戳
-  (setq org-roam-capture-templates
-	'(("d" "default" plain "%?" :target
-	   (file+head "${slug}.org" "#+title: ${title}\n")
-           :unnarrowed  t)))
-  (require 'org-roam-protocol))
-
 
 ;;关闭emacs后关闭后台gpg-agent，清除缓存的密码
 (add-hook 'kill-emacs-hook (defun personal-kill-gpg-agent ()

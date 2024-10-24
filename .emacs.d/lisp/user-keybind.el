@@ -39,18 +39,6 @@
   ("="   balance-windows))
 ;;-------------------------------------------------------end window
 ;;-------------------------------------------------------begin org
-;;  org-roam
-(defhydra hydra-org-roam (:hint nil )
-  "
-[_c_] org-id-get-create 
-[_i_] node-insert
-[_n_] node-find
-[_s_] db-sync
-"
-  ("c"   org-id-get-create nil :color blue)
-  ("i"   org-roam-node-insert nil :color blue)
-  ("n"   org-roam-node-find nil :color blue)
-  ("s"   org-roam-db-sync nil :color blue))
 ;;  org-agenda
 (defhydra hydra-org-agenda (:hint nil )
   "
@@ -119,7 +107,7 @@
   "
 [_t_] inline-images [_a_] +agenda [_t_] +table
 [_o_] export-html   [_l_] +list   [_L_] +link
-[_i_] meta-return   [_r_] +roam   [_b_] +block
+[_i_] meta-return   [_b_] +block  ^^
 [_g_] tags          [_c_] +clock  ^^
 "
   ("t"   org-toggle-inline-images nil :color blue)
@@ -127,7 +115,6 @@
   ("i"   org-meta-return nil :color blue)
   ("g"   org-set-tags-command nil :color blue)
   ("t"   hydra-org-table/body nil :color blue)
-  ("r"   hydra-org-roam/body nil :color blue)
   ("c"   hydra-org-clock/body nil :color blue)
   ("l"   hydra-org-plain-list/body nil :color blue)
   ("L"   hydra-org-link/body nil :color blue)
