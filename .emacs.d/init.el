@@ -181,9 +181,12 @@
                 '(("C"     (astyle "--mode=c"))
                   ("Shell" (shfmt "-i" "4" "-ci")))))
 ;;dired
-(setq dired-recursive-deletes 'always)
+(add-hook 'dired-mode dired-hide-details-mode)
+(setq dired-dwim-target t)
+(setq dired-listing-switches "-alGhv --group-directories-first")
 (setq dired-recursive-copies 'always)
-
+(setq dired-recursive-deletes 'always)
+(setq dired-kill-when-opening-new-dired-buffer t)
 ;;———————————————————————————————————————————————
 ;;put this at end of plugin
 (use-package which-key

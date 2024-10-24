@@ -15,8 +15,8 @@
 ;;-------------------------------------------------------window
 (defhydra hydra-window (:hint nil )
   "
-[_h_] go left  [_H_] move to left   [_s_] fork-to-right [_+_] inc height [_=_] balance-win
-[_j_] go down  [_J_] move to bottom [_v_] fork-to-below [_-_] dec height ^^
+[_h_] go left  [_H_] move to left   [_s_] fork-to-below [_+_] inc height [_=_] balance-win
+[_j_] go down  [_J_] move to bottom [_v_] fork-to-right [_-_] dec height ^^
 [_l_] go up    [_L_] move to right  [_x_] del-win       [_>_] inc width  ^^
 [_k_] go right [_K_] move to top    [_X_] del-other-win [_<_] dec width  ^^
 "
