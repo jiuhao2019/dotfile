@@ -10,6 +10,11 @@ alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 
 eval "$(fzf --bash)"
+# Print tree structure in the preview window
+export FZF_ALT_C_OPTS="
+  --walker-skip .git,node_modules,target
+  --preview 'tree -L 1 -d -C {}'"
+
 alias l='ls -lha'
 alias ll='ls -lh'
 alias ..='cd ..'
