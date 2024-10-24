@@ -5,7 +5,7 @@ gaps inner 23
 gaps outer 0
 
 #非bar栏里的其他区域字体
-font pango: FiraCode Nerd Font Mono,bold medium 9
+font pango: FiraCode Nerd Font Mono,bold medium 13
 
 # focus_follows_mouse yes|no
 focus_follows_mouse no
@@ -227,7 +227,7 @@ bar {
     height 21
 
     # bar栏里的区域字体
-    font pango: FiraCode Nerd Font Mono,bold medium 9
+    font pango: FiraCode Nerd Font Mono,bold medium 13
 
     status_command i3blocks -c ~/.config/i3/i3blocks.conf
 
@@ -254,27 +254,6 @@ bar {
     # 容器title不显示序号
     strip_workspace_numbers yes
 
-###########
-# gruvbox #
-###########
-#  colors {
-#    # bar background color
-#    background $bg
-#
-#    # text color used for blocks that do not have a color specified.
-#    statusline $yellow
-#
-#    focused_statusline $text
-#    focused_separator  $base
-#
-#    # workspaces section            
-#                         # border  backgr.   text
-#    focused_workspace    $aqua     $aqua     $darkgray
-#    inactive_workspace   $darkgray $darkgray $yellow
-#    active_workspace     $darkgray $darkgray $yellow
-#    urgent_workspace     $red $red $bg
-#    binding_mode       $base $base $surface1
-#  }
 ############
 # dracular #
 ############
