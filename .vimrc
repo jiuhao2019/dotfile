@@ -50,7 +50,7 @@ call plug#begin()
 Plug 'mbbill/undotree'
 Plug 'Brettm12345/moonlight.vim'
 call plug#end()
-"----------------------------------------kyotonight
+"----------------------------------------colorscheme
 set background =dark
 colorscheme moonlight
 
