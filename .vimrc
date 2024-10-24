@@ -40,15 +40,19 @@ let &t_SI = "\<Esc>[5 q" . "\<Esc>]12;green\x7"
 let &t_SR = "\<Esc>[3 q" . "\<Esc>]12;green\x7"
 " NORMAL mode
 let &t_EI = "\<Esc>[1 q" . "\<Esc>]12;green\x7"
-
+if (has("termguicolors"))
+ set termguicolors
+endif
+set linespace=3
+set guifont=Fira\ Code:h12
 "---------------------------------------------
 call plug#begin()
-Plug 'embark-theme/vim', { 'as': 'embark', 'branch': 'main' }
 Plug 'mbbill/undotree'
+Plug 'Brettm12345/moonlight.vim'
 call plug#end()
 "----------------------------------------kyotonight
-
-colorscheme embark
+set background =dark
+colorscheme moonlight
 
 "----------------------------------------undotree
 if has("persistent_undo")
