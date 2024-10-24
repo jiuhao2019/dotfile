@@ -33,6 +33,13 @@ set statusline=%t%m%r%h%w%=\ [%l\/%L:%v]
 set scrolloff =1
 set splitright
 set splitbelow
+"不同模式光标形状
+" INSERT mode
+let &t_SI = "\<Esc>[5 q" . "\<Esc>]12;orange\x7"
+" REPLACE mode
+let &t_SR = "\<Esc>[3 q" . "\<Esc>]12;yellow\x7"
+" NORMAL mode
+let &t_EI = "\<Esc>[1 q" . "\<Esc>]12;green\x7"
 
 "---------------------------------------------
 call plug#begin()
